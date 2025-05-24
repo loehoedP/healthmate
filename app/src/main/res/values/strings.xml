@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HealthMate</string>
+    <string name="hint_age">Usia (contoh: 35)</string>
+    <string name="hint_weight">Berat Badan (contoh: 70)</string>
+    <string name="hint_pressure">Tekanan Darah (contoh: 120/80)</string>
+    <string name="analyze">Analisa</string>
+</resources>
