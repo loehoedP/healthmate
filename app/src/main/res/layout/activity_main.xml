@@ -5,70 +5,102 @@
 
     <!-- Background Image -->
     <ImageView
-        android:layout_width="750dp"
-        android:layout_height="1750dp"
-        android:layout_gravity="center"
-        android:alpha="0.37"
-        android:scaleType="fitCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:scaleType="centerCrop"
         android:src="@drawable/background" />
 
     <!-- Konten utama -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:padding="24dp"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:padding="16dp">
+            android:gravity="center">
 
-            <EditText
-                android:id="@+id/ageInput"
+            <!-- Background Form Card -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_age"
-                android:inputType="number" />
+                android:orientation="vertical"
+                android:background="@drawable/form_background"
+                android:padding="20dp"
+                android:layout_margin="8dp"
+                android:elevation="4dp"
+                android:layout_gravity="center">
 
-            <EditText
-                android:id="@+id/weightInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_weight"
-                android:inputType="numberDecimal" />
+                <!-- Age Input -->
+                <EditText
+                    android:id="@+id/ageInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_age"
+                    android:inputType="number"
+                    android:textColor="#000000"
+                    android:textColorHint="#666666"
+                    android:background="@drawable/edittext_outline"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp" />
 
-            <EditText
-                android:id="@+id/bloodPressureInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_pressure" />
+                <!-- Weight Input -->
+                <EditText
+                    android:id="@+id/weightInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_weight"
+                    android:inputType="numberDecimal"
+                    android:textColor="#000000"
+                    android:textColorHint="#666666"
+                    android:background="@drawable/edittext_outline"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp" />
 
-            <Button
-                android:id="@+id/analyzeButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/analyze" />
+                <!-- Blood Pressure Input -->
+                <EditText
+                    android:id="@+id/bloodPressureInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_pressure"
+                    android:textColor="#000000"
+                    android:textColorHint="#666666"
+                    android:background="@drawable/edittext_outline"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp" />
 
-            <TextView
-                android:id="@+id/resultText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                <Button
+                    android:id="@+id/analyzeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/analyze"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#00BCD4" />
 
-            <!-- Button OK -->
-            <Button
-                android:id="@+id/okButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="OK"
-                android:layout_marginTop="16dp"
-                android:visibility="gone" />
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
+                <Button
+                    android:id="@+id/okButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone"
+                    android:backgroundTint="#FF6200EE"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
